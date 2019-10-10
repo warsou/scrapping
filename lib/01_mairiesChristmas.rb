@@ -18,6 +18,10 @@ mairie = page.xpath("//*/tr[4]/td[2]").text
 
 ville = page.xpath("/html/body/div/main/section[1]/div/div/div/h1").text
 ville = ville.split(' - ')[0]
+mairie1 = mairie.split("@")[0]
+ mairie2 = mairie.split("@")[1]
+ mairie2 = mairie2.split(/[A-Z]/)[0]
+mairie = mairie1 + "@" + mairie2
 #mairie = mairie =~ /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-z]+)/
 pagereturn = []
  h = Hash.new
